@@ -148,6 +148,7 @@ header b {
 }
 
 .members {
+    position: relative;
     background-color: var(--bg2);
     color: var(--fg2);
     justify-content: center;
@@ -185,7 +186,7 @@ header b {
 .cards:hover > .card:not(:hover),
 .cards:focus > .card:not(:focus),
 .cards:active > .card:not(:active) {
-    filter: blur(10px);
+    filter: blur(3px);
     transform: scale(0.9, 0.9);
     transition: 400ms;
 }
@@ -215,6 +216,7 @@ header b {
 }
 
 .forms {
+    position: relative;
     display: flex;
     align-items: center;
     background-color: var(--bg);
