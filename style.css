@@ -12,7 +12,10 @@
     --img-size: 20vh;
 }
 
-* {
+hr {
+    color: var(--fg);
+}
+body {
     padding: 0;
     margin: 0;
     font-family: var(--font-regular);
@@ -21,6 +24,7 @@
 header {
     background: var(--bg);
     color: var(--fg);
+    text-align: center;
 }
 
 main {
@@ -58,16 +62,18 @@ footer {
     font-size: var(--font-size);
 }
 
-#container1 {
-    text-align: center;
-    align-items: center;
-}
-
-#container1 p {
-    margin: 10px;
+header p {
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 10px;
     min-width: 5px;
     height: auto;
+    text-align: left;
+}
+
+header b {
+    font-family: var(--font-bold);
+    font-size: calc(var(--font-size) * 1.2);
 }
 
 #logo {
@@ -158,12 +164,30 @@ footer {
     justify-content: center;
 }
 
-.cards img {
+.cards .card {
     width: var(--img-size);
     height: var(--img-size);
     object-fit: cover;
     border-radius: 1rem;
     padding: 3px;
+    border: solid 4px transparent;
+}
+
+.cards .card:hover,
+.cards .card:focus,
+.cards .card:active {
+    transform: scale(1.1, 1.1);
+    transition: 300ms;
+    /* background: linear-gradient(var(--fg), var(--fg2)); */
+    border: solid 4px var(--fg2);
+}
+
+.cards:hover > .card:not(:hover),
+.cards:focus > .card:not(:focus),
+.cards:active > .card:not(:active) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+    transition: 400ms;
 }
 
 .languages {
